@@ -1,8 +1,11 @@
 import { createStore } from 'redux';
-import reducer from './reducers/reducer'
+import {reducer} from './reducers/reducer'
 
 
-let store = createStore(reducer);
+let store = createStore(
+    reducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 
 export default store;
